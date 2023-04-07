@@ -1,0 +1,244 @@
+
+
+
+            /* start global rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+body{
+             font-family: "work sans", sans-serif;
+             background-color:wheat; 
+
+}
+            /* end global rules */
+
+
+            /*  container */
+
+.container{
+             padding-left: 10px;     /*   padding for header (لو عايز تبين لون الصفحه من الجنب) */
+            padding-right: 10px;
+            /* width: 600px;   بتبوظ الشكل بنت القحبه  */
+            margin-left: auto;
+            margin-right: auto;
+            /* background-color: transparent; */
+            
+
+}   
+                    /* screens */
+
+        /* small */
+@media (min-width:768px) {
+    .container{
+        width: 750px;
+    }
+}
+
+        /* mediam */
+    @media (min-width:992px) {
+    .container{
+        width: 970px;
+    }
+}
+       
+        /* large */
+    @media (min-width:1200px) {
+    .container{
+        width: 1170px;
+    }
+    
+}
+                        /* end global rules */
+
+                        /* start header */
+.header{
+    padding: 20px;
+    margin-right: auto;
+    /* background-attachment: fixed; */
+}
+
+ .video{
+    position: absolute;
+			flex-wrap: wrap;
+            top: 0px;
+			left: 0;
+            right: px; ;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+
+}   
+                                /*start making header above landing (header) */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.content {
+    position: relative;
+    z-index: 1;
+  }
+                                /*end making header above landing (header) */
+
+
+.header .container{
+    display: flex;
+    flex-direction: row;
+     justify-content: space-between;
+    align-items: center;
+    
+}
+
+.container .logo{
+    width: 200px;
+    
+}
+
+            /* menu icon */
+.header .links{
+    position: relative;
+    
+}
+
+.header .links:hover .icon span:nth-child(2){
+        width: 100%;
+}
+.header .links:hover .icon span{
+background-color:gold;
+}
+.header .links .icon{
+    width: 30px;
+    display:flex;
+    flex-wrap: wrap;
+justify-content: flex-end;
+    margin-right: auto;
+}
+
+.header .links .icon span{
+    background-color: #ffffff;
+    margin-top: 0px;
+    margin: 3px;
+    height: 5px;
+    width: 30px;
+    border-radius: 10px;
+
+}
+.header .links .icon span:first-child{
+   
+    width: 100%;
+    transition: .3s;
+}
+.header .links .icon span:nth-child(2){
+   
+    width: 60%;
+    transition: 0.3s;
+}
+.header .links .icon span:last-child{ 
+    
+    width: 100%;
+    transition: 0.3s;
+
+}
+
+.header .container .links ul{
+
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0 ;
+    background-color: rgba(255, 255, 255, 0.359);
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    border-color: transparent;
+    top: calc(100%+15px); 
+      display: none;  
+}
+
+.header .links ul::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent rgba(255, 255, 255, 0.359) transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+.header .links:hover ul{
+
+    display: block;
+    
+}
+
+.header .links ul li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none ;
+    color: black;
+    transition: 0.3s;
+}
+.header .links ul li a:hover{
+    padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a{
+    border-bottom: 1px solid  #ddd;
+}
+
+
+
+                    /* <!-- start landing section vedio --> */
+.landing{
+    margin-top:-128px;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+      
+.landing .intro-text{
+    position: absolute;
+    left: 75%;
+    top: 60%;
+    transform: translate(-80px,5px);
+
+}
+.landing .intro-text h1{
+    margin: 0;
+}
+.landing .intro-text p{
+    font-style: italic;
+}
+                /* <!-- end landing section vedio --> */
+                
+                
+                /* <!-- start services section  --> */
+.services{
+    margin: 1%;
+    border-radius: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: burlywood;
+}
+ 
+.services .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    grid-gap: 20px;
+}   
+
+.services .feat{
+    padding: 20px;
+    text-align: center;
+
+}
+.services .feat h3{
+    font-weight: 800;
+    margin-top: 20px;
+}
+
+                /* <!--  end services section  --> */
